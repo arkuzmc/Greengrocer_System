@@ -19,7 +19,7 @@ namespace Greengrocer_System
                 if (choose == "F")
                 {
                     Console.WriteLine("Fruits");
-                    string[] fruits = { "Apple","Banana","Armut","Orange","Strawberry","Grape" };
+                    string[] fruits = { "Apple", "Banana", "Armut", "Orange", "Strawberry", "Grape" };
                     foreach (var item in fruits)
                     {
                         Console.WriteLine(fruits);
@@ -41,9 +41,9 @@ namespace Greengrocer_System
                 }
                 else if (choose == "V")
                 {
-                    Console.WriteLine("Vegetables: ");  
-                    string[] vegetables = { "Tomato","Cucumber","Pepper","Carrot","Potato" };
-                    foreach (var item in vegetables) 
+                    Console.WriteLine("Vegetables: ");
+                    string[] vegetables = { "Tomato", "Cucumber", "Pepper", "Carrot", "Potato" };
+                    foreach (var item in vegetables)
                     {
                         Console.WriteLine("Vegatables: ");
                     }
@@ -87,7 +87,7 @@ namespace Greengrocer_System
                 if (choose == "F")
                 {
                     Console.WriteLine("Taken Fruits");
-                    foreach (string fruit in fruitAmount.Keys) 
+                    foreach (string fruit in fruitAmount.Keys)
                     {
                         Console.WriteLine($"{fruit}:{fruitAmount[fruit]}kg");
 
@@ -164,12 +164,6 @@ namespace Greengrocer_System
                     continue;
                 }
 
-                Console.WriteLine("Would you like to take another process (Y/N) ?: ");
-                string cnt = Console.ReadLine();
-                if (cnt.ToUpper() != "Y")
-                {   
-                    break;
-                }
 
                 Console.WriteLine("*****CUSTOMER PANEL*****");
                 Console.WriteLine("Taken Product");
@@ -182,7 +176,13 @@ namespace Greengrocer_System
                     Console.WriteLine($"{vegatable}:{vegetableAmount[vegatable]} KG");
                 }
 
-                
+                Console.WriteLine("Would you like to take another process (Y/N) ?: ");
+                string cnt = Console.ReadLine();
+                if (cnt.ToUpper() != "Y")
+                {
+                    break;
+                }
+
             }
         }
     }
