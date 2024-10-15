@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.ComponentModel.Design;
 
 namespace Greengrocer_System
@@ -18,8 +18,8 @@ namespace Greengrocer_System
 
                 if (choose == "F")
                 {
-                    Console.WriteLine("Fruits: ");
-                    string[] fruits = { "Apple,Banana,Armut,Orange,Strawberry,Grape" };
+                    Console.WriteLine("Fruits");
+                    string[] fruits = { "Apple","Banana","Armut","Orange","Strawberry","Grape" };
                     foreach (var item in fruits)
                     {
                         Console.WriteLine(fruits);
@@ -41,11 +41,11 @@ namespace Greengrocer_System
                 }
                 else if (choose == "V")
                 {
-                    Console.WriteLine("Vegetables: ");
-                    string[] sebzeler = { "Tomato,Cucumber,Pipper,Carrot,Patato" };
-                    foreach (var item in vegatables)
+                    Console.WriteLine("Vegetables: ");  
+                    string[] vegetables = { "Tomato","Cucumber","Pepper","Carrot","Potato" };
+                    foreach (var item in vegetables) 
                     {
-                        Console.WriteLine("Vegatable: ");
+                        Console.WriteLine("Vegatables: ");
                     }
 
                     Console.WriteLine("Which vegetable did you choose ?");
@@ -87,20 +87,20 @@ namespace Greengrocer_System
                 if (choose == "F")
                 {
                     Console.WriteLine("Taken Fruits");
-                    foreach (string fruit in fruitAmount.Keys) ;
+                    foreach (string fruit in fruitAmount.Keys) 
                     {
                         Console.WriteLine($"{fruit}:{fruitAmount[fruit]}kg");
 
                     }
 
 
-                    Console.WriteLine("Hangi Meyveyi Satmak İstiyorsunuz ?");
+                    Console.WriteLine("Which fruit do you want to sell ?");
                     string choosedfruit = Console.ReadLine();
 
 
                     if (fruitAmount.ContainsKey(choosedfruit))
                     {
-                        Console.WriteLine("Which fruit do you want to sell ?");
+                        Console.WriteLine("How many kilos do you want to sell ?");
                         int kilo = Convert.ToInt32(Console.ReadLine());
 
                         if ((int)fruitAmount[choosedfruit] >= kilo)
@@ -164,11 +164,11 @@ namespace Greengrocer_System
                     continue;
                 }
 
-                Console.WriteLine("Would you like to take another process ? (V/F): ");
+                Console.WriteLine("Would you like to take another process (Y/N) ?: ");
                 string cnt = Console.ReadLine();
-                if (cnt != "e")
-                {
-                    break; 
+                if (cnt.ToUpper() != "Y")
+                {   
+                    break;
                 }
 
                 Console.WriteLine("*****CUSTOMER PANEL*****");
@@ -182,9 +182,8 @@ namespace Greengrocer_System
                     Console.WriteLine($"{vegatable}:{vegetableAmount[vegatable]} KG");
                 }
 
-
+                
             }
         }
     }
 }
-
